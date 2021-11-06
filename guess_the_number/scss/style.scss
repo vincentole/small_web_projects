@@ -90,9 +90,9 @@ p {
     transition: all 0.3s ease-in-out;
     transition-property: opacity, box-shadow, transform;
     &:hover {
-        opacity: 0.8;
+        opacity: 0.9;
         box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.1);
-        transform: scale(0.99);
+        transform: scale(0.995);
     }
     &:disabled {
         opacity: 0.5;
