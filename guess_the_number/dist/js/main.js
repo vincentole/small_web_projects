@@ -12,6 +12,8 @@ const resetButton = document.querySelector(".resetButton")
 
 let guessCount = 1;
 
+// Init load
+guessField.focus();
 
 // Functions
 const checkGuess = () => {
@@ -78,3 +80,6 @@ const resetGame = () => {
 
 // Events
 guessSubmit.addEventListener("click", checkGuess);
+guessField.addEventListener("keyup", e => {
+    if (e.key === "Enter") checkGuess();
+});
