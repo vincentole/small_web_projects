@@ -88,11 +88,10 @@ p {
     cursor: pointer;
     box-shadow: 0 1rem 1rem rgba(0,0,0,0.1);
     transition: all 0.3s ease-in-out;
-    transition-property: opacity, box-shadow, transform;
+    transition-property: opacity, box-shadow;
     &:hover {
-        opacity: 0.9;
+        opacity: 0.85;
         box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.1);
-        transform: scale(0.995);
     }
     &:disabled {
         opacity: 0.5;
