@@ -26,9 +26,6 @@ $font-default: 'Roboto', sans-serif;
 .pd {
     padding: 1rem;
 }
-.pd-b {
-    padding-bottom: 1rem;
-}
 .flex {
     display: flex;
     gap: 0.5rem;
@@ -46,17 +43,17 @@ body {
     min-height: 100vh;
     background-color: #231E36;
     color: #BCB8CC;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 2.3rem;
     font-weight: 300;
     text-align: center;
 }
 p {
-    line-height: 2.3rem;
-    font-size: 1.5rem;
+    line-height: 2rem;
+    font-size: 1.1rem;
     border-radius: 1rem;
     padding: 1rem;
 }
@@ -64,15 +61,14 @@ p {
 .container  {
     display: flex;
     flex-direction: column;
-    max-width: 700px;
+    max-width: 600px;
     min-height: 720px;
-    padding-bottom: 3rem;
     margin: 2rem;
     background-color: #1C172E;
-    // border: 1px solid #bcb8cc13;
+    border: 1px solid #222;
     border-radius: 1rem;
     padding: 2rem 4rem;
-    // box-shadow: 0 1.5rem 3rem rgba(0,0,0,0.4);
+    box-shadow: 0 2rem 2rem rgba(0,0,0,0.1);
 }
 
 .success {
@@ -90,9 +86,13 @@ p {
     background-color: #4929BB;
     color: #fff;
     cursor: pointer;
-    transition: opacity 0.5s ease-in-out;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    transition-property: opacity, box-shadow, transform;
     &:hover {
         opacity: 0.8;
+        box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.2);
+        transform: scale(0.99);
     }
     &:disabled {
         opacity: 0.5;
@@ -104,7 +104,7 @@ input[type=text] {
     padding: 1rem;
     background-color: #1C172E;
     border-radius: 1rem;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     &:focus {
         outline: 1px solid #4929BB;
       
@@ -116,10 +116,12 @@ input[type=text] {
 label {
     display: block;
     padding-bottom: 1rem;
+    font-size: 1rem;
 }
 .lastResult {
     text-align: center;
     color: #fff;
+    line-height: 1rem;
 }
 .resetButton {
     width: 100%;
