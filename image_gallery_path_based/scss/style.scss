@@ -21,6 +21,7 @@ $font-default: 'IBM Plex Sans', sans-serif;
 }
 
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

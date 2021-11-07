@@ -1,13 +1,15 @@
 
 const script = document.getElementById("gallery-script");
-const body = document.querySelector("body");
+const gallery = document.querySelector(".container");
+const loader = document.querySelector(".lds-roller");
 
-body.style.visibility = "hidden";
+gallery.style.visibility = "hidden";
 
-
-script.onload = () => { 
-    body.style.visibility = "visible";
-}
   
+setTimeout( () => {
+    gallery.style.visibility = "visible";
+    loader.style.display = "none";
+
+}, 1000);
 
 
