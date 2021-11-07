@@ -17,8 +17,7 @@ for (let i = 1; i <= imgNumber; i++) {
     
     newImage.onclick = e => {
         mainImage.src = e.target.src;
-        slider.style.transform = `translateX(${(i-1) * e.target.width}px)`;
+        slider.style.transform = `translateX(${(i-1) * slider.scrollWidth}px)`;
     }
 }
-// Set Slider Width
-slider.style.width = imageBar.scrollWidth / imgNumber + "px";
+
