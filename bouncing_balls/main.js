@@ -58,10 +58,6 @@ class Ball{
 
                 if (distance < this.size + balls[j].size) {
                     balls[j].color = this.color = randomRGB();
-                    this.velX = -(this.velX);
-                    this.velY = -(this.velY);
-                    balls[j].velX = -(balls[j].velX);
-                    balls[j].velY = -(balls[j].velY);
                 }
             }
         }
