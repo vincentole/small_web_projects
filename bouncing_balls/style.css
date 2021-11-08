@@ -23,8 +23,7 @@ h1 {
 }
 .instructions {
   font-size: 1.3rem;
-  
-  letter-spacing: -1px;
+
   position: fixed;
   margin: 0;
   bottom: 5rem;
@@ -77,4 +76,10 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 40em) {
+  html {
+    font-size: 12px;
+  }
 }
