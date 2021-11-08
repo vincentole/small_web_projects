@@ -5,11 +5,40 @@ const scoreTag = document.querySelector(".score");
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-const width = canvas.width = window.innerWidth;
-const height = canvas.height = window.innerHeight;
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
 
 resetBtn.onclick = () => {
     resetGame();
+}
+
+// Push balls into center on resize and adjust canvas dimensions
+window.onresize = () => {
+    changeWidth = width - window.innerWidth;
+    changeHeight = height - window.innerHeight;
+
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+
+    for (let i = 0; i < balls.length; i++) {
+        if (changeWidth > 0) {
+            if(balls[i].x > width/2) {
+                balls[i].x -= changeWidth;
+            } 
+            else {
+                balls[i].x += changeWidth;
+            }    
+        }
+        if (changeHeight > 0) {
+            if(balls[i].y > height/2) {
+                balls[i].y -= changeHeight;
+            } 
+            else {
+                balls[i].y += changeHeight;
+            }    
+        }
+        
+    }
 }
 
 // Utility functions
