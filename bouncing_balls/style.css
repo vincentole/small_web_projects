@@ -2,24 +2,79 @@ html, body {
     margin: 0;
   }
   
-  html {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    height: 100%;
-  }
+html {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: fixed;
+  margin: 0;
+  top: 2%;
+  right: 5%;
+  color: #fff;
+}
+.instructions {
+  font-size: 1.3rem;
   
-  body {
-    overflow: hidden;
-    height: inherit;
-  }
+  letter-spacing: -1px;
+  position: fixed;
+  margin: 0;
+  bottom: 5rem;
+  left: 5%;
+  color: #fff;
   
-  h1 {
-    font-size: 2rem;
-    letter-spacing: -1px;
-    position: absolute;
-    margin: 0;
-    top: 1rem;
-    right: 2rem;
-  
-    color: #f2f2f2cc;
-    text-shadow: 0 0 4px white;
-  }
+}
+
+.score {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  position: fixed;
+  margin: 0;
+  top: 2%;
+  left: 5%;
+  color: #fff;
+}
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.success {
+  margin-bottom: 10vh;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  background-color: #00b7127e;
+  background-image: linear-gradient(0deg, #00b71288 0%, #5bff157e 74%);
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+.reset {
+  background-color: #222;
+  font-size: 1.3rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
