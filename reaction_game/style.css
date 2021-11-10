@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Press Start 2P', 'Roboto', sans-serif;
+    background-color: #EBEBF3;
+    min-height: 100vh;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+div {
+    display: inline-block;
+}
+button {
+    font-family: inherit;
+    border: none;
+    background-color: #F8656E;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    box-shadow: 0 0.5rem 0.5rem #d5d5e4; 
+    max-width: 192px;
+    max-height: 64px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+.start-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 300px;
+}
+.start-container > * {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.rotate {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+}
+
+.arrow {
+    width: 100px;
+    filter: invert(61%) sepia(53%) saturate(1022%) hue-rotate(318deg) brightness(99%) contrast(97%);
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0 auto;
+    transition: opacity 0.3s ease-in-out;
+}
+.motivation {
+    grid-row: 1;
+    grid-column: 1;   
+}
+
+.hidden {
+    display: none;
+    
+}
+.invisible {
+    opacity: 0;
+    transition: all 0s;
+}
+
+@media (max-width: 33em) {
+    body {
+        font-size: 0.7rem;
+    }
+    button {
+        font-size: 0.7rem;
+        max-width: 140px;
+    }
+    header {
+        gap: 1rem
+    }
+    
+}
