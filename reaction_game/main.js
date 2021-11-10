@@ -45,7 +45,8 @@ function setEndGame() {
             isOver = true;
         }
         if (isOver) {
-            document.removeEventListener("keydown", keyHandler);
+            document.body.removeEventListener("keydown", keyHandler);
+            console.log("is Over");
             winnerEle.classList.remove("hidden");
             startBtn.classList.add("hidden");
             motivationELe.classList.add("hidden");
