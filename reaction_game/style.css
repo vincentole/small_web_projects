@@ -13,7 +13,7 @@ body {
     font-family: 'Press Start 2P', 'Roboto', sans-serif;
     background-color: #EBEBF3;
     min-height: 100vh;
-    padding: 1rem 2rem;
+    padding: 1.5% 10%;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -91,6 +91,13 @@ header {
     }
     header {
         gap: 1rem
+    }
+    
+}
+
+@media (max-width: 75em) {
+    body {
+        padding: 1.5% 3%;
     }
     
 }
