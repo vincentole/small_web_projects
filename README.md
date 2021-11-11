@@ -9,3 +9,4 @@ See them live here:
 * [Bouncing Balls](https://objective-leavitt-25fe81.netlify.app/)
 * [Stop Watch](https://compassionate-minsky-d87c79.netlify.app/)
 * [Reaction Game](https://heuristic-raman-34f767.netlify.app/)
+* [Calculator](https://youthful-pike-43f421.netlify.app/)
