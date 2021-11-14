@@ -10,3 +10,4 @@ See them live here:
 * [Stop Watch](https://compassionate-minsky-d87c79.netlify.app/)
 * [Reaction Game](https://heuristic-raman-34f767.netlify.app/)
 * [Calculator](https://youthful-pike-43f421.netlify.app/)
+* [Math Trainer](https://unruffled-cori-d53663.netlify.app/)
