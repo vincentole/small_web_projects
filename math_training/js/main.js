@@ -1,18 +1,22 @@
 const mathGenExercise = document.querySelector(".math-gen__exercise");
 const mathGenAnswerInput = document.querySelector("#math-gen__answer-input");
-
 const mathGenStartBtn = document.querySelector(".math-gen__start-btn");
+const mathGenSelectBtns = document.querySelectorAll(".math-gen__operation-btn");
 
 mathGenStartBtn.onclick = handleMathGenStartBtn;
 mathGenAnswerInput.addEventListener("input", handleAnswerInput);
+mathGenSelectBtns.forEach( btn => {
+    btn.addEventListener("click", handleSelectOperation);
+
+});
 
 let firstNumber;
 let secondNumber;
 let result;
-let [exerciseMin, exerciseMax, currentOperation] = [3, 10, "divideInt"];
+let [exerciseMin, exerciseMax, currentOperation] = [3, 10, "add"];
 
 function handleMathGenStartBtn(e) {
-    
+    mathGenAnswerInput.focus();
     updateExercise(exerciseMin, exerciseMax, currentOperation);
 }
 
@@ -27,16 +31,12 @@ async function handleAnswerInput(e) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+function handleSelectOperation(e) {
+    currentOperation = e.target.dataset.operator;
+    mathGenStartBtn.click();
+    document.querySelector(".math-gen__operation-btn.active").classList.remove("active");
+    e.target.classList.add("active");
+}
 
 
 

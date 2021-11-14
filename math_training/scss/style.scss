@@ -185,49 +185,68 @@ main {
     flex-direction: column;
     margin-bottom: 20%;
 }
-
 .math-gen {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    background-color: var(--gray-200);
+    margin: 1rem;
+    gap: 5rem;
 }
 .math-gen__main {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    grid-gap: 1rem;
+}
+.math-gen__tools {
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
+    .container {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 0 1rem;
+    }
+}
+.math-gen__operation-btn {
+    flex: 1;
 }
 .math-gen__exercise {
     display: inline-block;
-    border: 1px solid #222;
-    flex: 60 60 0;
+    border-bottom: 1px solid #000;
     font-family: 'Caveat', "Roboto", sans-serif;
     padding: 0.2rem 0.5rem;
 }
 .math-gen__answer {
     display: inline-block;
-    flex: 40 40 0;
     font-family: 'Caveat', "Roboto", sans-serif;
 }
 .math-gen__answer-input {
-    border: 1px solid #222;
     width: 100%;
     outline: none;
     padding: 0.2rem 0.5rem;
     transition: border 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
 }
 #math-gen__answer-input:focus {
-
-
-
 }
 .success {
-    border: 1px solid var(--green-500);
+    border-bottom: 1px solid var(--green-600);
+    &::placeholder {
+        color: var(--green-500);
+    }
 }
 .btn {
-    background: var(--orange-400);
+    background: var(--violet-300);
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: 1.5rem;
     cursor: pointer;
+    box-shadow: 0 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.1);
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    &.active {
+        background-color: var(--orange-300);
+    }
 }
 
