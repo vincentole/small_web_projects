@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <script defer src="./js/main.js"></script>
+        <title>Math Training</title>
+    </head>
+    <body>
+        <main>
+            <div class="math-gen">
+                <div class="math-gen__tools">
+                    <button class="btn math-gen__start-btn">Lets Go!</button>
+                    <div class="container">
+                        <button data-operator="add" class="btn math-gen__operation-btn active">+</button>
+                        <button data-operator="subtract" class="btn math-gen__operation-btn">-</button>
+                        <button data-operator="multiply" class="btn math-gen__operation-btn">&times;</button>
+                        <button data-operator="divideInt" class="btn math-gen__operation-btn">&divide;</button>
+                    </div>
+                </div>
+                <div class="math-gen__main">
+                    <div class="math-gen__exercise">Excercise</div>
+
+                    <div class="math-gen__answer">
+                        <input
+                            type="text"
+                            name="answer"
+                            id="math-gen__answer-input"
+                            class="math-gen__answer-input"
+                            placeholder="Answer"
+                        />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
