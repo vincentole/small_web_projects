@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+    transition: 0.5s ease-in-out;  
+}
+
+.boxes.big {
+    width: 550px;
+    height: 550px;
+    
+}
+.boxes.big .box {
+    transform: rotateZ(360deg);
+}
+
+.box {
+    width: 125px;
+    height: 125px;
+    background-image: url("./img/painting-g384c2e1b4_1920_cropped.jpg");
+    background-size: 500px 500px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    cursor: pointer;
+    border: 2px solid;
+}
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  border: 2px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 0px 0px 0px 0px, 1px px 0px 0px, 2px 2px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
