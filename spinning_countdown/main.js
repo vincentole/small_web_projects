@@ -27,7 +27,7 @@ async function handleRotate() {
     letsGo.classList.remove("hidden");
     letsGo.classList.remove("shrink");
     
-    await timeout(1000);
+    await timeout(2000);
     btn.classList.remove("hidden");
     btn.classList.remove("shrink");
 
