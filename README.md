@@ -1,5 +1,5 @@
-# small_web_projects
-My small web projects collection
+# Small Web Projects
+My collection of small web projects.
   
 See them live here:
 
