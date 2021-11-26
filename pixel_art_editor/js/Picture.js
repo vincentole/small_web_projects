@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-syntax */
-class Picture {
+
+export default class Picture {
     constructor(width, height, pixelsCanvas) {
         this.width = width;
         this.height = height;
@@ -12,14 +13,16 @@ class Picture {
     }
 
     pixel(x, y) {
-        return this.pixels[x + y * this.width];
+        return this.pixelsCanvas[x + y * this.width];
     }
 
     draw(pixels) {
-        const copy = this.pixels.slice();
+        const copy = this.pixelsCanvas.slice();
         for (const { x, y, color } of pixels) {
             copy[x + y * this.width] = color;
         }
         return new Picture(this.width, this.height, copy);
     }
 }
+
+
