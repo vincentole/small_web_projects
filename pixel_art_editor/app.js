@@ -4,7 +4,7 @@ import PixelEditor from './PixelEditor.js';
 import ToolSelect from './ToolSelect.js';
 import ColorSelect from './ColorSelect.js';
 // eslint-disable-next-line object-curly-newline
-import { draw, fill, rectangle, pick } from './tools.js';
+import { draw, fill, pick } from './tools.js';
 import { updateState } from './utilities.js';
 
 let state = {
@@ -17,7 +17,6 @@ const app = new PixelEditor(state, {
     tools: {
         draw,
         fill,
-        rectangle,
         pick,
     },
     controls: [ToolSelect, ColorSelect],

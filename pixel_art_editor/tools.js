@@ -8,24 +8,6 @@ export function draw(pos, state, dispatch) {
     return drawPixel;
 }
 
-export function rectangle(start, state, dispatch) {
-    function drawRectangle(pos) {
-        const xStart = Math.min(start.x, pos.x);
-        const yStart = Math.min(start.y, pos.y);
-        const xEnd = Math.max(start.x, pos.x);
-        const yEnd = Math.max(start.y, pos.y);
-        const drawn = [];
-        for (let y = yStart; y <= yEnd; y += 1) {
-            for (let x = xStart; x <= xEnd; x += 1) {
-                drawn.push({ x, y, color: state.color });
-            }
-        }
-        dispatch({ picture: state.picture.draw(drawn) });
-    }
-    drawRectangle(start);
-    return drawRectangle;
-}
-
 const around = [
     { dx: -1, dy: 0 },
     { dx: 1, dy: 0 },

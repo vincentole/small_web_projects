@@ -7,8 +7,13 @@ const currScale = 10;
 export default class Canvas {
     constructor(picture, pointerDown) {
         // input format: Picture(width, height, pixels), pixels: [color, ...] -> dim: width * height
-
-        this.dom = elt('canvas', {});
+        // input format: pointerDown: pos => tool = tools[this.state.tool],
+        //                            onMove = tools(pos, this.state, dispatch),
+        //                            if (onMove) return pos => onMove(pos, this.state);
+        this.dom = elt('canvas', {
+            onmousedown: (event) => this.mouseDown(event, pointerDown),
+            ontouchstart: (event) => this.touchStart(event, pointerDown),
+        });
         // this.picture; init by syncState;
         this.syncState(picture);
     }
@@ -19,6 +24,47 @@ export default class Canvas {
         if (this.picture === picture) return;
         this.picture = picture;
         drawPicture(this.picture, this.dom, currScale);
+    }
+
+    mouseDown(event, pointerDown) {
+        if (event.button !== 0) return;
+        let pos = pointerPosition(event, this.dom);
+        if (!pointerDown(pos)) return; // Not sure what this is for ...
+
+        const move = (moveEvent) => {
+            if (moveEvent.buttons === 0) {
+                this.dom.removeEventListener('mousemove', move);
+            } else {
+                const newPos = pointerPosition(moveEvent, this.dom);
+                if (newPos.x === pos.x && newPos.y === pos.y) return;
+                pos = newPos;
+                pointerDown(newPos);
+            }
+        };
+
+        this.dom.addEventListener('mousemove', move);
+    }
+
+    touchStart(event, pointerDown) {
+        let pos = pointerPosition(event.touches[0], this.dom);
+        event.preventDefault();
+
+        if (!pointerDown(pos)) return; // Not sure what this is for ...
+
+        const move = (moveEvent) => {
+            const newPos = pointerPosition(moveEvent.touches[0], this.dom);
+            if (newPos.x === pos.x && newPos.y === pos.y) return;
+            pos = newPos;
+            pointerDown(newPos);
+        };
+
+        const end = () => {
+            this.dom.removeEventListener('touchmove', move);
+            this.dom.removeEventListener('touchedn', end);
+        };
+
+        this.dom.addEventListener('touchmove', move);
+        this.dom.addEventListener('touchend', end);
     }
 }
 
@@ -35,4 +81,13 @@ function drawPicture(picture, canvas, scale) {
             cx.fillRect(x * scale, y * scale, scale, scale);
         }
     }
+}
+
+function pointerPosition(event, domNode) {
+    const rect = domNode.getBoundingClientRect(); // returns obj of element pos relative to viewport
+    return {
+        // MouseEvent.clientX/Y return pos of mouse relative to viewport
+        x: Math.floor((event.clientX - rect.left) / currScale),
+        y: Math.floor((event.clientY - rect.top) / currScale),
+    };
 }

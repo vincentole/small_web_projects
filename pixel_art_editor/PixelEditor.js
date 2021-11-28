@@ -13,7 +13,11 @@ export default class PixelEditor {
 
         const { tools, controls, dispatch } = config;
         this.state = state;
-        this.canvas = new Canvas(state.picture);
+        this.canvas = new Canvas(state.picture, (pos) => {
+            const tool = tools[this.state.tool];
+            // not sure what if(tool()) is for ...
+            if (tool(pos, this.state, dispatch)) return (pos) => tool(pos, this.state);
+        });
         this.controls = controls.map((Control) => new Control(state, config));
         this.dom = elt(
             'div',
