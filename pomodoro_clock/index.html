@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./main.js"></script>
+    <title>Pomodoro Timer</title>
+</head>
+<body>
+    <main>
+        <div class="timer">
+            <h1 class="display display1">30:00</h1>
+            <h1 class="display display2">05:00</h1>
+            <h1 class="display display3">15:00</h1>
+
+            <div class="inputs">
+                <label for="inputTimer1">Timer 1</label>
+                <label for="inputTimer2">Timer 2</label>
+                <label for="inputTimer3">Timer 3</label>
+                <input type="number" name="inputTimer1" id="inputTimer1" min="0" value="30">
+                <span>min</span>
+                <input type="number" name="inputTimer2" id="inputTimer2" min="0" value="5">
+                <span>min</span>
+                <input type="number" name="inputTimer3" id="inputTimer3" min="0" value="15">
+                <span>min</span>
+            </div>
+            <button type="button" class="start">Start</button>
+            <button type="button" class="stop">Stop</button>
+            <button type="button" class="reset">Reset</button>
+        </div>
+    </main>
+    
+</body>
+</html>
