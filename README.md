@@ -14,3 +14,4 @@ See them live here:
 * [Image Splitter](https://friendly-darwin-f8cc62.netlify.app/)
 * [Spinning Countdown](https://zen-wright-462f1a.netlify.app/)
 * [Button with Ripple Effect](https://affectionate-morse-2fc03a.netlify.app/)
+* [Simon Game](https://sleepy-sammet-a78184.netlify.app/)
