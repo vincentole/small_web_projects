@@ -1,31 +1,52 @@
 body {
     background-color: #171717;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
     text-align: center;
     color: #fafafa;
-    padding: 5rem;
+    padding: 1rem;
+    transition: background-color 0.2s ease-in-out;
 }
+
 body.game-over {
     background-color: #7f1d1d;
 }
+
 body.success {
     background-color: #14532d;
 }
+
+body.loading {
+    background-color: #1C1917;
+}
+
+h2 {
+    color: #737373;
+    margin: 4rem 0 2rem 0;
+}
+
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 4rem;
-    margin-bottom: 4rem;
+    gap: 1rem;
 }
 
 button {
     cursor: pointer;
 }
 
+.header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header button {
     background: #171717;
     border: 1px solid #fafafa;
     border-radius: 5px;
-    padding: 0 2rem;
+    padding: 1rem 3rem;
     font-size: 2rem;
     color: #fafafa;
     transition: all 0.5s ease-in-out;
@@ -47,8 +68,8 @@ button {
 }
 
 .buttons button {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: none;
 }
 
@@ -101,6 +122,20 @@ button {
 }
 
 @media (min-width: 640px) {
+    body {
+        padding: 5rem;
+        font-size: 1.5rem;
+    }
+    .header {
+        flex-direction: row;
+        gap: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .buttons button {
+        width: 200px;
+        height: 200px;
+    }
     .buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
