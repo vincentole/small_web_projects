@@ -1,0 +1,109 @@
+body {
+    background-color: #171717;
+    text-align: center;
+    color: #fafafa;
+    padding: 5rem;
+}
+body.game-over {
+    background-color: #7f1d1d;
+}
+body.success {
+    background-color: #14532d;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header button {
+    background: #171717;
+    border: 1px solid #fafafa;
+    border-radius: 5px;
+    padding: 0 2rem;
+    font-size: 2rem;
+    color: #fafafa;
+    transition: all 0.5s ease-in-out;
+}
+
+.header button:disabled {
+    border-color: #525252;
+    color: #525252;
+}
+
+.buttons-wrap {
+    display: inline-block;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.buttons button {
+    width: 200px;
+    height: 200px;
+    border: none;
+}
+
+.red {
+    background-color: #dc2626;
+}
+
+.red:hover {
+    background-color: #991b1b;
+}
+
+.red.light {
+    background-color: #f87171;
+}
+
+.yellow {
+    background-color: #d97706;
+}
+
+.yellow:hover {
+    background-color: #92400e;
+}
+
+.yellow.light {
+    background-color: #facc15;
+}
+
+.green {
+    background-color: #16a34a;
+}
+
+.green:hover {
+    background-color: #166534;
+}
+
+.green.light {
+    background-color: #4ade80;
+}
+
+.blue {
+    background-color: #2563eb;
+}
+
+.blue:hover {
+    background-color: #1e40af;
+}
+
+.blue.light {
+    background-color: #60a5fa;
+}
+
+@media (min-width: 640px) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
